@@ -71,9 +71,6 @@ class ImapMail(object):
                             print usubject
                             print self.body
 
-                        if not isinstance(self.body, str):
-                            self.body = '.'
-
                         uto = my_unicode(to_me[0][0], to_me[0][1])
 
                         if '上线邮件'.decode(encoding='utf-8') in usubject:
@@ -81,6 +78,8 @@ class ImapMail(object):
                             mail_from = msg['From']
                             Cc = ca.CC
                             sm = SendMail()
+                            if not isinstance(self.body, str):
+                                self.body = '.'
                             rc = sm._send_mail(mail_from, Cc, usubject, self.body)
                             if _Debug:
                                 print type(mail_from)
