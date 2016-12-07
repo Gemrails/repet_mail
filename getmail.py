@@ -75,8 +75,9 @@ class ImapMail(object):
 
                         if '上线邮件'.decode(encoding='utf-8') in usubject:
                             print "start to repet."
-                            mail_from = msg['From']
-                            Cc = ca.CC
+                            mail_from = ca.CC
+                            Cc = msg['From']
+                            print mail_from, Cc
                             sm = SendMail()
                             if not isinstance(self.body, str):
                                 self.body = '.'
