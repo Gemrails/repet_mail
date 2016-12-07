@@ -58,4 +58,4 @@ class SendMail(object):
 
 if __name__ == '__main__':
     sm = SendMail()
-    sm._send_mail('cuibin@dongqiudi.com', 'cuibin@dongqiudi.com', u'Re: 12月上线邮件')
+    sm._send_mail('@qq.com', '@qq.com', u'Re:件')

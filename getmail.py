@@ -6,7 +6,6 @@ import email
 import ConstArgv as ca
 
 from sendmail import SendMail
-import re
 
 _Debug = True
 
@@ -77,7 +76,7 @@ class ImapMail(object):
                             print "start to repet."
                             mail_from = msg['From']
                             #Cc = "develop@dongqiudi.com"
-                            Cc = "cuibin@dongqiudi.com"
+                            Cc = ca.CC
                             sm = SendMail()
                             print self.body
                             rc = sm._send_mail(mail_from, Cc, usubject, self.body)

@@ -3,8 +3,9 @@
 
 
 IMAPHOST = 'imap.exmail.qq.com'
-SMTPHOST = 'imap.exmail.qq.com'
+SMTPHOST = 'smtp.exmail.qq.com'
 
+CC = ''
 USERNAME = ''
 PASSWD = ''
 DEFAULT_BOX = ''
