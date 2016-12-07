@@ -71,11 +71,9 @@ class ImapMail(object):
                             print usubject
                         uto = my_unicode(to_me[0][0], to_me[0][1])
 
-                        #if '上线邮件'.decode(encoding='utf-8') in usubject and ('崔斌'.decode(encoding='utf-8') in uto or 'cuibin'.decode(encoding='utf-8') in uto):
                         if '上线邮件'.decode(encoding='utf-8') in usubject:
                             print "start to repet."
                             mail_from = msg['From']
-                            #Cc = "develop@dongqiudi.com"
                             Cc = ca.CC
                             sm = SendMail()
                             print self.body
